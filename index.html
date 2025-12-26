@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player UI</title>
+
+    <link rel="icon" href="cover.jpg">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player {
+            width: 320px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .cover {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .player h3 {
+            margin-bottom: 5px;
+        }
+
+        .artist {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .progress {
+            height: 6px;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 40%;
+            height: 100%;
+            background: #6c63ff;
+            transition: width 0.3s ease;
+        }
+
+        .progress:hover .progress-bar {
+            width: 70%;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+
+        .controls button {
+            border: none;
+            background: #f0f0f0;
+            font-size: 1.3rem;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .controls button:hover {
+            background: #6c63ff;
+            color: white;
+        }
+
+        .play {
+            background: #6c63ff;
+            color: white;
+        }
+
+        .volume {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .volume-bar {
+            flex: 1;
+            height: 6px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .volume-level {
+            width: 60%;
+            height: 100%;
+            background: #6c63ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player">
+        <img src="LOST.JPG" alt="Album Cover" class="cover">
+
+        <h3>Lost In The Music</h3>
+        <p class="artist">Unknown Artist</p>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="controls">
+            <button>⏮</button>
+            <button class="play">▶</button>
+            <button>⏭</button>
+        </div>
+
+        <div class="volume">
+            <span>🔊</span>
+            <div class="volume-bar">
+                <div class="volume-level"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
